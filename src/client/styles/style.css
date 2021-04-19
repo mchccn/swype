@@ -1,0 +1,27 @@
+.swyper {
+    min-height: 784px;
+    max-height: 784px;
+}
+
+.swyper-no {
+    min-height: 784px;
+    max-height: 784px;
+}
+
+.Typist .Cursor {
+    display: inline-block;
+    opacity: 1;
+    animation: blink 1s ease infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,79 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type User {
+  id: String!
+  avatar: String!
+  username: String!
+  accessToken: String!
+  refreshToken: String!
+  bio: String!
+  tags: [Tags!]!
+  matches: [String!]!
+  rejections: [String!]!
+}
+
+enum Tags {
+  PROGRAMMER
+  DEVELOPER
+  SOFTWARE
+  ASSEMBLY
+  C_LANG
+  C_PLUS_PLUS
+  C_SHARP
+  D_SHARP
+  ELIXIR_LANG
+  ERLANG
+  F_SHARP
+  GO_LANG
+  GIT
+  GRAPHQL
+  HASKELL
+  JAVASCRIPT
+  JAVA
+  NO_SQL
+  OBJECTIVE_C
+  KOTLIN
+  PHP
+  PYTHON
+  Q_SHARP
+  RUST
+  R_LANG
+  SQL
+  SWIFT
+  TYPESCRIPT
+  ANGULAR_JS
+  ANGULAR
+  REACT_NATIVE
+  REACT
+  NEXT_JS
+  NUXT_JS
+  NEST_JS
+  NODE_JS
+  VUE_JS
+  SVELTE
+  GATSBY
+  SCIENCE
+  PHYSICS
+  CHEMISTRY
+  MATHEMATICS
+  YOUTUBE
+  YOUTUBER
+}
+
+type Query {
+  user(accessToken: String!): User
+  userInfo(id: String!): User
+  userMatch(id: String!): User
+}
+
+type Mutation {
+  updateBio(bio: String!, id: String!): User
+  addTag(tag: String!, id: String!): User
+  removeTag(tag: String!, id: String!): User
+  addMatch(match: String!, id: String!): User
+  removeMatch(match: String!, id: String!): User
+  addRejection(rejection: String!, id: String!): User
+  removeRejection(rejection: String!, id: String!): User
+}
